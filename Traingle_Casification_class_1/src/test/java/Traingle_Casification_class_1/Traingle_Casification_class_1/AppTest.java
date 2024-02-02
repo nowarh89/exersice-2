@@ -12,49 +12,111 @@ public class AppTest {
 	
 	TriangleClassifier triangle = new TriangleClassifier();
 	
-	@Test
-  //שווה צלעות
-	public void equilateralTriangle(){
-        int a = 8;
-        int b = 8;
-        int c=8;
-        triangle.classifyTriangle(a,b,c);
-        String expected =Triangle_Types.equilateral.toString();
-        String result = triangle.get_type().toString();
-        org.junit.Assert.assertEquals(expected, result.toString());
-    }
-	@Test
-	//שונה צלעות
-	public void check_Scalene(){
-        int a = 3;
-        int b = 4;
-        int c=5;
-        triangle.classifyTriangle(a,b,c);
-        String expected =Triangle_Types.Scalene.toString();
-        String result = triangle.get_type().toString();
-        org.junit.Assert.assertEquals(expected, result.toString());
-    }
+
+	 @Test
+	    public void testNotTriangle_Case1() {
+	        int a = 1;
+	        int b = 2;
+	        int c = 3;
+	        triangle.classifyTriangle(a, b, c);
+	        String result = triangle.get_type().toString();
+	        String expected =Triangle_Types.Nottriangle.toString();
+	        org.junit.Assert.assertEquals(expected, result.toString());
+
+	   
+	    }
+
+	    @Test
+	    public void testNotTriangle_Case2() {
+	        int a = 2;
+	        int b = 1;
+	        int c = 1;
+	        triangle.classifyTriangle(a, b, c);
+	        String result = triangle.get_type().toString();
+	        String expected =Triangle_Types.Nottriangle.toString();
+	        org.junit.Assert.assertEquals(expected, result.toString());
+
+	    }
+	    @Test
+	    public void testNotTriangle_Case3() {
+	        int a = 3;
+	        int b = 6;
+	        int c = 3;
+	        triangle.classifyTriangle(a, b, c);
+	        String result = triangle.get_type().toString();
+	        String expected =Triangle_Types.Nottriangle.toString();
+	        org.junit.Assert.assertEquals(expected, result.toString());
+
+	    }
+	    @Test
+	    public void testNotTriangle_Case4() {
+	        int a = 2;
+	        int b = 2;
+	        int c = 4;
+	        triangle.classifyTriangle(a, b, c);
+	        String result = triangle.get_type().toString();
+	        String expected =Triangle_Types.Nottriangle.toString();
+	        org.junit.Assert.assertEquals(expected, result.toString());
+
+	    }
+	 
+	    @Test
+	    public void testNotTriangle_Case5() {
+	        int a = 2;
+	        int b = 3;
+	        int c = 4;
+	        triangle.classifyTriangle(a, b, c);
+	        String result = triangle.get_type().toString();
+	        String expected =Triangle_Types.Scalene.toString();
+	        org.junit.Assert.assertEquals(expected, result.toString());
+
+	    }
+	    @Test
+	    public void testNotTriangle_Case6() {
+	        int a = 1;
+	        int b = 3;
+	        int c = 3;
+	        triangle.classifyTriangle(a, b, c);
+	        String result = triangle.get_type().toString();
+	        String expected =Triangle_Types.isosceles.toString();
+	        org.junit.Assert.assertEquals(expected, result.toString());
+
+	    }
+	    @Test
+	    public void testNotTriangle_Case7() {
+	        int a = 5;
+	        int b = 2;
+	        int c = 5;
+	        triangle.classifyTriangle(a, b, c);
+	        String result = triangle.get_type().toString();
+	        String expected =Triangle_Types.isosceles.toString();
+	        org.junit.Assert.assertEquals(expected, result.toString());
+
+	    }
+	    @Test
+	    public void testNotTriangle_Case8() {
+	        int a = 2;
+	        int b = 2;
+	        int c = 1;
+	        triangle.classifyTriangle(a, b, c);
+	        String result = triangle.get_type().toString();
+	        String expected =Triangle_Types.isosceles.toString();
+	        org.junit.Assert.assertEquals(expected, result.toString());
+
+	    }
+	    @Test
+	    public void testNotTriangle_Case9() {
+	        int a = 3;
+	        int b = 3;
+	        int c = 3;
+	        triangle.classifyTriangle(a, b, c);
+	        String result = triangle.get_type().toString();
+	        String expected =Triangle_Types.equilateral.toString();
+	        org.junit.Assert.assertEquals(expected, result.toString());
+
+	    }
+	    
+	    
+
 	
-	@Test
-	//שווה שוקיים
-	public void check_isosceles(){
-		int a=8;
-		int b=5;
-		int c=8;
-		triangle.classifyTriangle(a, b, c);
-		String expected=Triangle_Types.isosceles.toString();
-		String result=triangle.get_type().toString();
-        org.junit.Assert.assertEquals(expected, result.toString());		
-	}
-	@Test
-	//תקינות משולש
-	public void check_IsTriangle(){
-		int a=3;
-		int b=5;
-		int c=8;
-		triangle.classifyTriangle(a, b, c);
-		String expected=Triangle_Types.Nottriangle.toString();
-		String result=triangle.get_type().toString();
-        org.junit.Assert.assertEquals(expected, result.toString());		
-	}
 }  
