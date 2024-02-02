@@ -14,7 +14,7 @@ public class AppTest {
 	
 
 	 @Test
-	    public void testNotTriangle_Case1() {
+	    public void test_Case1() {
 	        int a = 1;
 	        int b = 2;
 	        int c = 3;
@@ -27,7 +27,7 @@ public class AppTest {
 	    }
 
 	    @Test
-	    public void testNotTriangle_Case2() {
+	    public void test_Case2() {
 	        int a = 2;
 	        int b = 1;
 	        int c = 1;
@@ -38,7 +38,7 @@ public class AppTest {
 
 	    }
 	    @Test
-	    public void testNotTriangle_Case3() {
+	    public void test_Case3() {
 	        int a = 3;
 	        int b = 6;
 	        int c = 3;
@@ -49,7 +49,7 @@ public class AppTest {
 
 	    }
 	    @Test
-	    public void testNotTriangle_Case4() {
+	    public void test_Case4() {
 	        int a = 2;
 	        int b = 2;
 	        int c = 4;
@@ -61,7 +61,7 @@ public class AppTest {
 	    }
 	 
 	    @Test
-	    public void testNotTriangle_Case5() {
+	    public void test_Case5() {
 	        int a = 2;
 	        int b = 3;
 	        int c = 4;
@@ -72,7 +72,7 @@ public class AppTest {
 
 	    }
 	    @Test
-	    public void testNotTriangle_Case6() {
+	    public void test_Case6() {
 	        int a = 1;
 	        int b = 3;
 	        int c = 3;
@@ -83,7 +83,7 @@ public class AppTest {
 
 	    }
 	    @Test
-	    public void testNotTriangle_Case7() {
+	    public void test_Case7() {
 	        int a = 5;
 	        int b = 2;
 	        int c = 5;
@@ -94,7 +94,7 @@ public class AppTest {
 
 	    }
 	    @Test
-	    public void testNotTriangle_Case8() {
+	    public void test_Case8() {
 	        int a = 2;
 	        int b = 2;
 	        int c = 1;
@@ -105,7 +105,7 @@ public class AppTest {
 
 	    }
 	    @Test
-	    public void testNotTriangle_Case9() {
+	    public void test_Case9() {
 	        int a = 3;
 	        int b = 3;
 	        int c = 3;
